@@ -22,10 +22,7 @@ FROM alpine:3.13</br>
 </br>
 WORKDIR /app</br>
 </br>
-RUN apk add --no-cache python3 \</br>
-    && ln -sf python3 /usr/bin/python \</br>
-    && python3 -m ensurepip \</br>
-    && pip3 install --no-cache --upgrade pip requests</br>
+RUN apk add --no-cache python3 && ln -sf python3 /usr/bin/python && python3 -m ensurepip && pip3 install --no-cache --upgrade pip requests</br>
 </br>
 COPY ./nasa.py /app/nasa.py  </br>
 </br>
