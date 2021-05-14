@@ -15,7 +15,7 @@ Make sure to replace \<Full Path to File\> and \<Full Path to Folder\> with your
 </br>
 # Optional
 To create your own docker image you can execute the following command:</br>
-docker build -t <your tag> . </br>
+docker build -t \<your tag\> . </br>
 </br>
 if you prefer not mount the nasa.py script every time, you may modify the Dockerfile to include it:</br>
 FROM alpine:3.13</br>
