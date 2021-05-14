@@ -6,6 +6,11 @@ Dockerfile included in git as well.</br>
 It's possible to execute the nasa.py directly or via docker.</br>
 </br>
 If you run locally make sure you have python 3 installed and in PATH, also make sure to install requests module (pip3 install requests).</br>
+Make sure you have a folder in path: /app/csv_files , or modify the script (nasa.py) on line 41: </br>
+with open('/app/csv_files/%s-nasa-api.csv'.....</br>
+Change to: </br>
+with open('%s-nasa-api.csv'..... and the file will created in your workdir.</br>
+To execute the script run: </br>
 ./nasa.py -q "my query"</br>
 For additonal instructions use ./nasa.py --help</br>
 </br>
