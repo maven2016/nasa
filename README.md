@@ -32,3 +32,9 @@ COPY ./nasa.py /app/nasa.py  </br>
 RUN chmod +x nasa.py </br>
 </br>
 CMD ["./nasa.py"]
+</br>
+</br>
+</br>
+</br>
+Now you execute docker using this command instead:</br>
+docker run -it -v <Full Path to Folder>/csv_files:/app/csv_files maven2016/nasa:1.0.1 ./nasa.py -q "Ilan Ramon"
