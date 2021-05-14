@@ -10,7 +10,7 @@ If you run locally make sure you have python 3 installed and in PATH, also make 
 For additonal instructions use ./nasa.py --help</br>
 </br>
 To run the script via docker, execute the following command:</br>
-docker run -it -v <Full Path to File>/nasa.py:/app/nasa.py -v <Full Path to Folder>/csv_files:/app/csv_files maven2016/nasa:1.0.0 ./nasa.py -q "Ilan Ramon"</br>
+docker run -it -v <Full Path to File>/nasa.py:/app/nasa.py -v <Full Path to Folder>/csv_files:/app/csv_files maven2016/nasa:1.0.0 ./nasa.py -q "apolo 11"</br>
 Make sure to replace <Full Path to File> and <Full Path to Folder> with your actual path.</br>
 </br>
 # Optional
@@ -31,10 +31,10 @@ COPY ./nasa.py /app/nasa.py  </br>
 </br>
 RUN chmod +x nasa.py </br>
 </br>
-CMD ["./nasa.py"]
+ENTRYPOINT ["./nasa.py"]
 </br>
 </br>
 </br>
 </br>
 Now you execute docker using this command instead:</br>
-docker run -it -v <Full Path to Folder>/csv_files:/app/csv_files maven2016/nasa:1.0.1 ./nasa.py -q "Ilan Ramon"
+docker run -it -v <Full Path to Folder>/csv_files:/app/csv_files <your docker image:tag> -q "apolo 11"
