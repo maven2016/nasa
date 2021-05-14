@@ -34,7 +34,5 @@ RUN chmod +x nasa.py </br>
 ENTRYPOINT ["./nasa.py"]
 </br>
 </br>
-</br>
-</br>
-Now you execute docker using this command instead:</br>
+Now you can execute docker using this command instead:</br>
 docker run -it -v <Full Path to Folder>/csv_files:/app/csv_files <your docker image:tag> -q "apolo 11"
