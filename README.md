@@ -1,6 +1,6 @@
 # nasa api
 
-Pbulic image available: maven2016/nasa:1.0.0</br>
+Public image available: maven2016/nasa:1.0.0</br>
 Dockerfile included in git as well.</br>
 </br>
 It's possible to execute the nasa.py directly or via docker.</br>
