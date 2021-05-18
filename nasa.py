@@ -42,8 +42,8 @@ with open('/app/csv_files/%s-nasa-api.csv' % args.query.strip().replace(" ", "-"
     writer = csv.writer(f)
     writer.writerow(["file_name", "Size", "url"])
     for item in jsonObject["collection"]["items"]:
-        img_size = requests.get(item["links"][0]["href"]).content
-        print("too small: {}".format(item["links"][0]["href"].rsplit('/',1)[1]))
-        if int(len(img_size)) >= 71680:
-            print("file_name: {} size: {} url: {}".format(item["links"][0]["href"].rsplit('/',1)[1], convert_size(len(img_size)), item["links"][0]["href"]))
-            writer.writerow([item["links"][0]["href"].rsplit('/',1)[1], convert_size(len(img_size)), item["links"][0]["href"]])
+        org_img = json.loads(requests.get(item["href"]).content)
+        img_size = requests.get(org_img[0]).content
+        if int(len(img_size)) >= 102400:
+            print("file_name: {} size: {} url: {}".format(org_img[0].rsplit('/',1)[1], convert_size(len(img_size)), org_img[0]))
+            writer.writerow([org_img[0].rsplit('/',1)[1], convert_size(len(img_size)), org_img[0]])
